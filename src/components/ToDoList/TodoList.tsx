@@ -1,5 +1,5 @@
-import type { ITodo } from "../types/data";
-import TodoItem from "./TodoItem";
+import type { ITodo } from "../../types/data";
+import TodoItem from "../ToDoItem/TodoItem";
 
 interface ITodoListProps {
   items: ITodo[];
@@ -7,7 +7,11 @@ interface ITodoListProps {
   toggleTodo: (id: number) => void;
 }
 
-const TodoList: React.FC<ITodoListProps> = ({items, removeTodo, toggleTodo}) => {
+const TodoList: React.FC<ITodoListProps> = ({
+  items,
+  removeTodo,
+  toggleTodo,
+}) => {
   return items.map((elem) => (
     <TodoItem
       key={elem.id}
